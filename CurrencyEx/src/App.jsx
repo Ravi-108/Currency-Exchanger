@@ -40,7 +40,7 @@ export default function CurrencyConverter() {
   return (
     <div className="app">
       <div className="converter-card">
-        <h1>💱 Currency Converter</h1>
+        <h1> Currency Converter</h1>
 
         {/* Amount */}
         <div className="input-group">
