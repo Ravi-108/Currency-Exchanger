@@ -1,0 +1,161 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* Global font set to Poppins */
+}
+
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  color: #eaeaea;
+}
+
+/* Main container */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Converter box */
+.converter-card {
+  background: #1a1a1a;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 200, 150, 0.3);
+  width: 380px;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.converter-card:hover {
+  box-shadow: 0 0 35px rgba(0, 200, 150, 0.7);
+  transform: translateY(-4px);
+}
+
+/* Heading */
+/* Heading with pulsing neon glow */
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #101212;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+
+  text-shadow:
+    0 0 5px #00c896,
+    0 0 10px #00c896,
+    0 0 15px #00e6a8,
+    0 0 20px #00e6a8,
+    0 0 25px #00e6a8;
+
+  /* Animate glow */
+  animation: pulseGlow 2.5s infinite alternate;
+}
+
+/* Keyframes for pulsing glow */
+@keyframes pulseGlow {
+  0% {
+    text-shadow:
+      0 0 5px #00c896,
+      0 0 10px #00c896,
+      0 0 15px #00e6a8,
+      0 0 20px #00e6a8,
+      0 0 25px #00e6a8;
+  }
+  50% {
+    text-shadow:
+      0 0 8px #00c896,
+      0 0 16px #00c896,
+      0 0 22px #00e6a8,
+      0 0 28px #00e6a8,
+      0 0 35px #00e6a8;
+  }
+  100% {
+    text-shadow:
+      0 0 5px #00c896,
+      0 0 10px #00c896,
+      0 0 15px #00e6a8,
+      0 0 20px #00e6a8,
+      0 0 25px #00e6a8;
+  }
+}
+
+/* Input groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+/* Input fields & dropdowns */
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #111;
+  color: #f1f1f1;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border: 1px solid #00c896;
+  box-shadow: 0 0 8px rgba(0, 200, 150, 0.6);
+  outline: none;
+}
+
+/* Currency row */
+.currency-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Convert button */
+.convert-btn {
+  background: linear-gradient(135deg, #00c896, #00e6a8);
+  color: #0f0f0f;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.convert-btn:hover {
+  background: linear-gradient(135deg, #00e6a8, #00c896);
+  transform: scale(1.07);
+  box-shadow: 0 0 18px rgba(0, 230, 168, 0.8);
+}
+
+/* Result */
+.result {
+  margin-top: 22px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #28e0c1;
+}
