@@ -10,11 +10,11 @@ export default function CurrencyConverter() {
   const [rates, setRates] = useState({});
   const [result, setResult] = useState(null);
 
-  // ✅ read API key from .env
+ 
   const API_KEY = import.meta.env.VITE_EXCHANGE_API_KEY;
 ;
 
-  // fetch all rates based on USD
+ 
   useEffect(() => {
     fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/USD`)
       .then((res) => res.json())
@@ -27,12 +27,12 @@ export default function CurrencyConverter() {
       .catch((err) => console.error("Error fetching currencies:", err));
   }, [API_KEY]);
 
-  // convert function
+  
   const convert = () => {
     if (!amount || isNaN(amount)) return;
     if (!rates[fromCurrency] || !rates[toCurrency]) return;
 
-    // convert via USD
+   
     const amountInUSD = amount / rates[fromCurrency];
     const converted = amountInUSD * rates[toCurrency];
     setResult(converted);
