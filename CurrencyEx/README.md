@@ -1,1 +1,1 @@
-![Screenshot](C:\Users\rairo\Desktop\Ravi College\PROJECT\projecr\currencyEx\CurrencyEx\src\assets\Screenshot 2025-10-30 000702.png)
+![Screenshot](./src/assets/Screenshot%202025-10-30%20000702.png)
